@@ -1,0 +1,12 @@
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 100vw;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}

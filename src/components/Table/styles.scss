@@ -1,0 +1,62 @@
+// import makeStyles from "@material-ui/styles/makeStyles";
+
+// // some `const`s to quickly move the grid around
+// const cellHeight = 30;
+// const cellWidth = 150;
+// const height = 400;
+// const width = 600
+
+// const useStyles = makeStyles({
+//     multigrid: {
+//         marginTop: 8,
+//         width: "100%",
+//         height: "100%",
+//         position: "relative",
+//     },
+//     rowLabels: {
+//         // absolutely position the label and move it down `cellHeight`
+//         position: "absolute !important",
+//         top: cellHeight,
+//         borderTop: "1px solid black"
+//     },
+//     columnLabels: {
+//         // absolutely position the label and move it down `cellWidth`
+//         position: "absolute !important",
+//         left: cellWidth,
+//         borderLeft: "1px solid black"
+//     },
+//     rowLabel: {
+//         border: 'solid 1px black',
+//     },
+//     cell: {
+//         // set the `cellHeight`
+//         height: cellHeight,
+//         display: "flex",
+//         alignItems: "center",
+//         padding: "0 8px",
+//         fontFamily: "Arial"
+//     }
+// })
+
+
+.Grid {
+    margin-top: 10px;
+}
+
+.GridItemEven,
+.GridItemOdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GridItemEven {
+  background-color: #f8f8f0;
+}
+.rowLabel{
+    // absolutely position the label and move it down `cellHeight`
+    position: absolute !important;
+    top: 0;
+    border-top: 1px solid black;
+}
+// export { useStyles, cellHeight, cellWidth, height, width }

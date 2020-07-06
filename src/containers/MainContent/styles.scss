@@ -1,0 +1,34 @@
+.page-wrapper {
+   display: grid;
+   grid-template-rows: 4rem 1fr;
+   grid-template-columns: 1fr;
+
+   .page-info {
+       height: 3rem;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       padding: 1rem 1.5rem;
+       border: var(--border);
+       box-shadow: var(--shadow);
+
+       .view {
+           display: flex;
+       }
+   }
+   .table-section {
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+
+       .filters{
+           height: 4rem;
+           padding: 1rem;
+       }
+       .table {
+           position: relative;
+           height: 100%;
+           padding: 0 50px;
+       }
+   }
+}

@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Faker from 'faker'
+import './App.scss';
+import { Sidebar, MainContent } from './containers'
 
-function App() {
+
+const App = () => {
+  const [ users, setUsers ] = useState([])
+
+  useEffect(() => {
+    let usersList = []
+    for (let i = 0; i < 40; i++) {
+      const user = {
+        name: Faker.name.firstName(),
+        company: Faker.company.companyName(),
+        email: Faker.internet.email(),
+        phoneNumber: Faker.phone.phoneNumber(),
+        city: Faker.address.city(),
+        state: Faker.address.state(),
+        revenue: Math.random(100000, 10000000)
+      }
+      usersList.push(user)
+    }
+    setUsers(usersList)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <MainContent users={users} />
     </div>
   );
 }
