@@ -6,16 +6,16 @@ import './styles.scss';
 
 const FixedColumn = ({ columnIndex, rowIndex, data, style }) => {
     return (
-        <div style={style}>
+        <div className="fixed-column" style={{ ...style }}>
             {rowIndex}
         </div>
-        // {/* <div style={{ ...style }} > {data[ rowIndex ].name}</ div> */ }
+        // {/* <div style={{ display: 'flex', alignItems: 'center', padding: '0 1rem', ...style }} > {data[ rowIndex ].name}</ div> */ }
 
     )
 }
 
 const ColumnLabel = ({ columnIndex, rowIndex, data, style }) => {
-    return <div style={style}>
+    return <div className='column-label' style={{ ...style }}>
         {data[ columnIndex ]}
     </div>
 }
@@ -23,13 +23,10 @@ const ColumnLabel = ({ columnIndex, rowIndex, data, style }) => {
 const Cell = memo(({ columnIndex, rowIndex, data, style }) => {
     let values = Object.keys(data[ 0 ])[ columnIndex ]
     let row = data[ rowIndex ]
-    // if (values === 'name') {
-    //     return (<div width={0} height={0}></div>);
-    // }
     console.log(row[ values ], values);
 
     return (
-        <div style={{ overflow: "hidden", ...style }}>{data[ rowIndex ][ values ]}</div>
+        <div className='cell' style={{ ...style }}>{data[ rowIndex ][ values ]}</div>
     )
 }, areEqual)
 
@@ -50,17 +47,19 @@ const MultiGrid = ({ height, width, users }) => {
                 itemData={Object.keys(users[ 0 ])}
                 columnCount={Object.values(users[ 0 ]).length}
                 rowCount={1}
-                columnWidth={200}
-                rowHeight={40}
-                height={40}
-                width={width - 50}
+                columnWidth={250}
+                rowHeight={35}
+                height={35}
+                width={width - 55}
                 overscanColumnCount={1}
                 overscanRowCount={1}
                 ref={headerRef}
                 style={{
                     overflowX: 'hidden',
                     overflowY: 'hidden',
-                    borderBottom: `1px solid gray`,
+                    borderBottom: `1px solid #d4d4d4`,
+                    borderRight: `1px solid #d4d4d4`,
+                    position: 'absolute',
                     left: 50
                 }}
             >
@@ -76,8 +75,14 @@ const MultiGrid = ({ height, width, users }) => {
                 overscanRowCount={1}
                 ref={rowRef}
                 rowCount={Object.keys(users).length}
-                rowHeight={40}
-                style={{ overflow: 'hidden', background: 'white' }}
+                rowHeight={35}
+                style={{
+                    overflow: 'hidden',
+                    background: 'white',
+                    borderRight: `1px solid #d4d4d4`,
+                    // borderTop: `1px solid #d4d4d4`,
+                    position: 'absolute', top: 35,
+                }}
                 width={50}
             >
                 {FixedColumn}
@@ -86,15 +91,15 @@ const MultiGrid = ({ height, width, users }) => {
                 className="Grid"
                 columnCount={Object.keys(users[ 0 ]).length}
                 itemData={users}
-                columnWidth={200}
+                columnWidth={250}
                 height={height}
                 onScroll={onScrollNative}
                 outerRef={gridRef}
                 overscanColumnCount={1}
                 overscanRowCount={1}
                 rowCount={Object.keys(users).length}
-                rowHeight={40}
-                style={{ position: 'absolute', left: 100, top: 40 }}
+                rowHeight={35}
+                style={{ position: 'absolute', top: 35, left: 50 }}
                 width={width - 50}
             >
                 {Cell}

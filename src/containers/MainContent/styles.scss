@@ -1,34 +1,85 @@
 .page-wrapper {
    display: grid;
-   grid-template-rows: 4rem 1fr;
+   grid-template-rows: 3rem 1fr;
    grid-template-columns: 1fr;
+   overflow: auto;
 
    .page-info {
        height: 3rem;
        width: 100%;
        display: flex;
        justify-content: space-between;
-       padding: 1rem 1.5rem;
-       border: var(--border);
-       box-shadow: var(--shadow);
+       align-items: center;
+       padding: 1rem;
+       border-bottom: var(--border);
+       font-size: 1rem;
 
-       .view {
+       .views {
            display: flex;
+           cursor: pointer;
+
+           .view-button {
+                width: 5rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                font-size: 0.6rem;
+                background-color: var(--lightGray);
+                color: var(--gray);
+                justify-content: center;
+
+                &.active {
+                background-color: var(--lightBlue);
+                color: var(--blue);
+            }
+
+                svg {
+                    margin-right: 0.4rem;
+                    font-size: 1rem;
+                }
        }
+    }
+    
    }
    .table-section {
        display: flex;
        flex-direction: column;
        height: 100%;
+       padding-bottom: 2rem;
 
        .filters{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
            height: 4rem;
-           padding: 1rem;
+           padding: 1rem 0;
+           margin: 0 1rem;
+           color: var(--blue);
+
+           div {
+               display: flex;
+               align-items: center;
+
+           }
+
+           .filter-icon {
+               fill: var(--blue);
+               margin-right: 0.3rem;
+               font-size: 0.9rem;
+           }
        }
        .table {
            position: relative;
            height: 100%;
-           padding: 0 50px;
+           margin: 0 1rem;
+           border: var(--border);
+           border-radius: 0.2rem;
+           padding-bottom: 2rem;
        }
+       .pagination {
+               height: 2rem;
+               width: 7rem;
+               align-self: flex-end;
+        }
    }
 }

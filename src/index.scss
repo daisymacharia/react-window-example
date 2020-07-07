@@ -16,7 +16,20 @@ body {
   * {
     box-sizing: border-box;
   }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--dark);
+    outline: 1px solid var(--gray);
+  }
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

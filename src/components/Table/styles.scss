@@ -40,7 +40,7 @@
 
 
 .Grid {
-    margin-top: 10px;
+    // margin-top: 10px;
 }
 
 .GridItemEven,
@@ -58,5 +58,36 @@
     position: absolute !important;
     top: 0;
     border-top: 1px solid black;
+}
+.column-label{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-right: var(--border);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    color: var(--gray);
+    font-weight: 700;
+    background-color: var(--lightGray);
+
+   &::nth-last-child(1){
+    border-right: none;
+   }
+}
+.fixed-column {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem; 
+    overflow: hidden; 
+}
+
+.cell {
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border);
+    border-right: var(--border);
+    overflow: hidden; 
+    padding: 0 1rem;
 }
 // export { useStyles, cellHeight, cellWidth, height, width }

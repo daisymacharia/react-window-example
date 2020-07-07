@@ -1,8 +1,9 @@
 .App {
   display: grid;
   height: 100vh;
-  grid-template-rows: 4rem 1fr;
+  grid-template-rows: 3.5rem 1fr;
   grid-template-columns: 100vw;
+  // overflow: hidden;
 
 }
 

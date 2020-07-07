@@ -1,8 +1,50 @@
 .sidebar {
-    height: 4rem;
+    height: 3.5rem;
     width: 100%;
     position: relative;
     z-index: 2;
     border-bottom: var(--border);
-    box-shadow: var(--shadow);
+    padding: 1rem;
+    color: var(--gray);
+
+    .sidebar-wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr auto  ;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            color: var(--dark);
+            
+            svg {
+                font-size: 1.5rem;
+            }
+        }
+
+        .navigation-items {
+            display: flex;
+            justify-content: center;
+
+            .nav-item {
+                display: flex;
+                align-items: center;
+                margin-right: 2rem;
+                cursor: pointer;
+
+                svg{
+                    font-size: 0.75rem;
+                    margin-right: 0.2rem
+                }
+            }
+        }
+        .menu-items {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
 }

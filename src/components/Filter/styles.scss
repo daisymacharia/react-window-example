@@ -1,0 +1,25 @@
+.filter {
+    display: flex;
+    width: 10rem;
+    height: 2rem;
+    border: var(--border);
+    margin-right: 2rem;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--dark);
+    border-radius: 0.2rem;
+
+    .label{
+        padding: 0.5rem;
+        text-transform: uppercase;
+        border-right: var(--border);
+        color: var(--gray);
+        background-color: var(--lightGray);
+        border-bottom-left-radius: 0.2rem;
+    }
+    .value {
+        padding: 0.5rem;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,23 @@
+.search {
+    height: 2rem;
+
+    .search-input{
+        height: 100%;
+        width: 10rem;
+        padding: 0 0 0 0.5rem;
+        outline: none;
+        border: var(--border);
+        border-radius: 0.2rem;
+
+        &::placeholder {
+            color: var(--gray);
+        }
+    }
+
+    svg {
+        position: relative;
+        right: 1.5rem;
+        font-size: 1rem;
+        color: var(--dark);
+    }
+}
