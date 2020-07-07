@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-window-example/static/css/main.cfcd0503.chunk.css",
+    "main.js": "/react-window-example/static/js/main.7485cf83.chunk.js",
+    "main.js.map": "/react-window-example/static/js/main.7485cf83.chunk.js.map",
+    "runtime-main.js": "/react-window-example/static/js/runtime-main.0533d94e.js",
+    "runtime-main.js.map": "/react-window-example/static/js/runtime-main.0533d94e.js.map",
+    "static/js/2.28c27b29.chunk.js": "/react-window-example/static/js/2.28c27b29.chunk.js",
+    "static/js/2.28c27b29.chunk.js.map": "/react-window-example/static/js/2.28c27b29.chunk.js.map",
+    "index.html": "/react-window-example/index.html",
+    "precache-manifest.c8a9e8167a0bf64e522d0ec0c1450fe8.js": "/react-window-example/precache-manifest.c8a9e8167a0bf64e522d0ec0c1450fe8.js",
+    "service-worker.js": "/react-window-example/service-worker.js",
+    "static/css/main.cfcd0503.chunk.css.map": "/react-window-example/static/css/main.cfcd0503.chunk.css.map",
+    "static/js/2.28c27b29.chunk.js.LICENSE.txt": "/react-window-example/static/js/2.28c27b29.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0533d94e.js",
+    "static/js/2.28c27b29.chunk.js",
+    "static/css/main.cfcd0503.chunk.css",
+    "static/js/main.7485cf83.chunk.js"
+  ]
+}
