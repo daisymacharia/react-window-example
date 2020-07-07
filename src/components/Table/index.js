@@ -1,5 +1,4 @@
 import React, { Fragment, useRef, memo } from 'react';
-import { FixedSizeList as List } from "react-window";
 import { FixedSizeGrid as Grid, areEqual } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import './styles.scss';
@@ -22,8 +21,7 @@ const ColumnLabel = ({ columnIndex, rowIndex, data, style }) => {
 
 const Cell = memo(({ columnIndex, rowIndex, data, style }) => {
     let values = Object.keys(data[ 0 ])[ columnIndex ]
-    let row = data[ rowIndex ]
-    console.log(row[ values ], values);
+    // let row = data[ rowIndex ]
 
     return (
         <div className='cell' style={{ ...style }}>{data[ rowIndex ][ values ]}</div>
